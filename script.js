@@ -112,3 +112,23 @@ function switchBack(){
 }
 // note how it is possible to insert before a fictive "last element" that doesn't exist
 switchBtn2.addEventListener("click",switchBack);
+
+// function 9
+let jsEvent = document.querySelector('.navbar-brand')
+let body = document.querySelector('body')
+
+jsEvent.addEventListener('keydown', (press) => {
+    if (press.key == "a")
+      body.setAttribute('class', 'col-4')
+
+    else if (press.key == "y")
+       body.setAttribute("class",'col-4 offset-4')
+
+    else if (press.key == "p")
+    body.setAttribute("class",'col-4 offset-8')
+
+    else if (press.key == "b")
+    body.removeAttribute("class")
+
+    
+  });
